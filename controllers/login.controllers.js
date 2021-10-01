@@ -14,7 +14,7 @@ const controladorLogin = async(req, res) => {
             res.json('usuario no encontrado')
         }
 
-        const token = await createjwt(users._id)
+        const token = await createjwt(user._id)
 
         res.json({ token })
     } catch (err) {

@@ -50,6 +50,7 @@ const validarCampos = async(req, res, next) => {
     if (!error.isEmpty()) {
         res.status(400).json('parametros invalidos ' + error)
     }
+    next()
 }
 module.exports = {
     validarPostUser,

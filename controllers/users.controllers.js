@@ -36,7 +36,6 @@ ctrlusers.rutaPost = async(req, res) => {
 
 //controlador de la ruta put
 ctrlusers.rutaPut = async(req, res) => {
-        console.log('aaa')
         try {
             const { username, email, password, role } = req.body;
             const newPassword = await bcrypt.hash(password, 10)
