@@ -1,5 +1,5 @@
 const { check, validationResult } = require('express-validator')
-const middCUs = {}
+
 
 const validarPostUser = () => {
     return [
