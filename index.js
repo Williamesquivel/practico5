@@ -5,6 +5,7 @@ require('./database')
 
 //middleware
 app.use(morgan('dev'))
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
@@ -17,6 +18,7 @@ app.use('/login', require('./routes/login.routes'));
 
 
 //configuraciones
+
 app.set('port', process.env.PORT || 4000)
 
 app.listen(app.get('port'), () => {
